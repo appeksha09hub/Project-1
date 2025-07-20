@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🍽️ Funky Recipe Book</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header>
+    <div class="header-overlay">
+      <h1>🍽️ My Funky Recipe Book</h1>
+      <input type="text" id="search" placeholder="Search for yum..." />
+      <div class="filter-bar">
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+          <option value="Dish">Dish</option>
+          <option value="Snack">Snack</option>
+          <option value="Dessert">Dessert</option>
+        </select>
+        <select id="typeFilter">
+          <option value="">All Types</option>
+          <option value="Veg">Veg</option>
+          <option value="Non-Veg">Non-Veg</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home-section" class="page active">
+      <div id="recipe-list" class="grid-container"></div>
+      <div id="pagination-controls"></div>
+    </section>
+
+    <section id="add-section" class="page">
+      <form id="recipe-form">
+        <h2>📝 Add Your Recipe</h2>
+        <input type="text" id="recipe-name" placeholder="Recipe Name" required />
+        <input type="text" id="category" placeholder="Category or Tag (e.g. Snack)" required />
+        <select id="type" required>
+          <option value="">Select Type</option>
+          <option value="Veg">Veg</option>
+          <option value="Non-Veg">Non-Veg</option>
+        </select>
+        <textarea id="ingredients" placeholder="Ingredients (comma-separated)" required></textarea>
+        <textarea id="steps" placeholder="Preparation Steps" required></textarea>
+        <input type="file" id="image" accept="image/*" required />
+        <button type="submit">🍳 Save Recipe</button>
+      </form>
+    </section>
+
+    <section id="about-section" class="page">
+      <h2>👨‍🍳 About This App</h2>
+      <p>This funky little recipe book lets you store and explore your tastiest ideas. Made with 🍅, 🍋, and ❤️!</p>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button onclick="showSection('home-section')">🏠 Home</button>
+    <button onclick="showSection('add-section')">➕ Add</button>
+    <button onclick="showSection('about-section')">ℹ️ About</button>
+  </nav>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
